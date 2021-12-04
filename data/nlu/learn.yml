@@ -1,0 +1,89 @@
+version: "3.0"
+
+nlu:
+  - intent: learn
+    examples: |
+      - I want to learn something
+      - I want to study something
+      - I want to learn about my subjects
+      - Teach me something
+      - Teach me [english](subject)
+      - Teach me [math](subject)
+      - I want to learn [poem](topic) from [engilsh](subject)
+      - I want to learn about [animals](topic) from [science](subject)
+      - Teach me [poem](topic) from [engilsh](subject)
+      - Teach me [addition](topic) from [math](subject)
+      - Help me with [engilsh](subject) subject
+      - Help me with [math](subject)
+      - I need to study [poem](topic) from [engilsh](subject)
+      - I need to learn [poem](topic) from [engilsh](subject)
+      - I have doubt in [poem](topic) from [engilsh](subject)
+      - I have doubt in [english](subject)
+      - I need help to learn 
+      - I need help to study
+      - I need help to study [poem](topic) from [engilsh](subject)
+      - Make me learn [poem](topic) from [engilsh](subject)
+      - Study
+      - Learn
+      - Teach
+
+  - intent: repeat
+    examples: |
+      - Please repeat
+      - What?
+      - What did you say?
+      - I don't understand
+      - I didn't understand
+      - Say it again
+      - Again
+      - Say it again please
+      - Say it once more
+      - Paddern
+      - One more time
+      - Teach me again
+      - I Want to start over
+      - start over
+      - start over please
+      - I did not get it
+      - I didn't get it
+      - I didn't understand it
+      - Repeat yourself
+      - you are not clear
+      - you are not clear about it
+      - I have doubt so repeat again
+      - I have no idea what you said
+      - I don't know what you said
+      - Make yourself clear
+      - Say slowly
+      - Teacv me slowly again
+
+  - intent: stop
+    examples: |
+      - Stop
+      - Stop teaching me
+      - Enough
+      - I am bored
+      - I am done
+      - It is boring
+      - I am fed up
+      - Bore
+      - boring
+      - please stop
+      - bye
+      - end it
+      - ok enough
+      - ok stop
+      - please stop teaching
+
+  - intent: subject
+    examples: |
+      - [english](subject)
+      - [math](subject) subject
+      - I want to learn [english](subject)
+      - I want to study [english](subject)
+      - Please teach me [english](subject)
+      - Today I'll learn [english](subject)
+      - Today I'll study [english](subject)
+      - I feel like learning [english](subject)
+      - I feel like studying [english](subject)
+      - I feel like [english](subject)

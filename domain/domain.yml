@@ -1,0 +1,79 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - learn
+  - stop
+  - repeat
+  - subject
+  - topic
+
+entities:
+  - subject
+  - lesson
+  - topic
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+    - text: "Hey! Nice to see you... How may I help?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Learn Assist."
+
+  utter_subject:
+    - text: "What subject do you want to learn about?"
+
+  utter_lesson:
+    - text: "What lesson do you want to learn about?"
+
+  utter_topic:
+    - text: "What topic do you want to learn about?"
+
+  utter_are_you_ready:
+    - text: "Great, I will start teaching you! Are you ready?"
+
+  utter_did_great:
+    - text: "You did well... Great!"
+
+  utter_ask_subject:
+    - text: "What subject do you want to learn today?"
+    - text: "Good! What subject do you feel like learning today?"
+
+  utter_ask_lesson:
+    - text: "What lesson do you want to learn today?"
+
+  utter_ask_topic:
+    - text: "What topic do you want to learn about?"
+
+  utter_submit_learn_form:
+    - text: "Great! I will teach {topic} from lesson number {lesson} in {subject}!"
+
+actions:
+  - action_learn
+  - action_submit_learn_form
+  - action_assessment
+  - validate_learn_form
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

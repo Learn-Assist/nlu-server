@@ -1,0 +1,9 @@
+version: "3.0"
+
+stories:
+  - story: Basic learning path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: learn
+    - action: utter_learn
