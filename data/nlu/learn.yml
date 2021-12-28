@@ -9,20 +9,20 @@ nlu:
       - Teach me something
       - Teach me [english](subject)
       - Teach me [math](subject)
-      - I want to learn [poem](topic) from [engilsh](subject)
+      - I want to learn [london bridge is falling down](topic) from [engilsh](subject)
       - I want to learn about [animals](topic) from [science](subject)
-      - Teach me [poem](topic) from [engilsh](subject)
+      - Teach me [london bridge is falling down](topic) from [engilsh](subject)
       - Teach me [addition](topic) from [math](subject)
       - Help me with [engilsh](subject) subject
       - Help me with [math](subject)
-      - I need to study [poem](topic) from [engilsh](subject)
-      - I need to learn [poem](topic) from [engilsh](subject)
-      - I have doubt in [poem](topic) from [engilsh](subject)
+      - I need to study [london bridge is falling down](topic) from [engilsh](subject)
+      - I need to learn [london bridge is falling down](topic) from [engilsh](subject)
+      - I have doubt in [london bridge is falling down](topic) from [engilsh](subject)
       - I have doubt in [english](subject)
       - I need help to learn 
       - I need help to study
-      - I need help to study [poem](topic) from [engilsh](subject)
-      - Make me learn [poem](topic) from [engilsh](subject)
+      - I need help to study [london bridge is falling down](topic) from [engilsh](subject)
+      - Make me learn [london bridge is falling down](topic) from [engilsh](subject)
       - Study
       - Learn
       - Teach
@@ -79,11 +79,24 @@ nlu:
     examples: |
       - [english](subject)
       - [math](subject) subject
-      - I want to learn [english](subject)
-      - I want to study [english](subject)
-      - Please teach me [english](subject)
-      - Today I'll learn [english](subject)
-      - Today I'll study [english](subject)
-      - I feel like learning [english](subject)
-      - I feel like studying [english](subject)
-      - I feel like [english](subject)
+      - I want to learn [english](subject) subject
+      - I want to learn [math](subject) subject
+      - I want to learn [english](subject) subject now
+
+  - intent: topic
+    examples: |
+      - [baba black sheep](topic)
+      - [there was a moon](topic)
+      - [london bridge is falling down](topic)
+      - I need to learn the topic of [london bridge is falling down](topic)
+      - I need to learn [london bridge is falling down](topic) topic
+      - [mary had a little lamb](topic) topic
+      - [london bridge is falling down](topic) topic
+      - [Tortoise and Hare](topic) topic
+      - [Tortoise and the Hare](topic)
+
+  - intent: lesson
+    examples: |
+      - [1](lesson)
+      - [2](lesson)
+      - lesson [1](lesson)

@@ -1,0 +1,32 @@
+version: "3.0"
+
+nlu:
+  - lookup: subject
+    examples: |
+      - English
+      - Social
+      - Science
+      - Maths
+      - History
+      - Geography
+      - Chemistry
+      - Biology
+      - Physics
+      - Computer Science
+
+  - lookup: topic
+    examples: |
+      - London Bridge is Falling Down
+      - Baba Black Sheep
+      - Tortoise and the Hare
+      - Tortoise and Hare
+      - Photosynthesis
+
+  - lookup: lesson
+    examples: |
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6

@@ -68,12 +68,58 @@ responses:
   utter_submit_learn_form:
     - text: "Great! I will teach {topic} from lesson number {lesson} in {subject}!"
 
+  utter_did_not_understand:
+    - text: "Sorry, I didn't understand that. Please tru again."
+
+  utter_want_to_learn_again:
+    - text: "Would you like to learn something else?"
+
 actions:
   - action_learn
   - action_submit_learn_form
-  - action_assessment
   - validate_learn_form
+  - action_init_conversation
+  - action_ask_subject
+  - action_ask_lesson
+  - action_ask_topic
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+forms:
+  learn_form:
+    required_slots:
+      - subject
+      - lesson
+      - topic
+
+slots:
+  subject:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: subject
+
+  lesson:
+    type: float
+    influence_conversation: true
+    min_value: 1
+    max_value: 6
+    mappings:
+      - type: from_entity
+        entity: lesson
+
+  topic:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: topic
+
+  requested_slot:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom

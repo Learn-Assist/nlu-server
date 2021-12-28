@@ -13,7 +13,7 @@ rules:
 
   - rule: Activate learning form
     steps:
-      - intent: subject
+      - intent: learn
       - action: learn_form
       - active_loop: learn_form
 
@@ -27,3 +27,8 @@ rules:
           - requested_slot: null
       - action: utter_submit_learn_form
       - action: action_submit_learn_form
+
+  - rule: Did not understand
+    steps:
+      - intent: nlu_fallback
+      - action: utter_did_not_understand

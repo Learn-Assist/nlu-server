@@ -1,9 +1,192 @@
 version: "3.0"
 
 stories:
-  - story: Basic learning path
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: learn
-    - action: utter_learn
+  - story: Happy learning path
+    steps:
+      - intent: greet
+      - action: action_init_conversation
+      - action: utter_greet
+      - intent: learn
+      - action: learn_form
+      - active_loop: learn_form
+      - slot_was_set:
+          - requested_slot: null
+      - intent: affirm
+      - action: action_learn
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+      - or:
+          - intent: goodbye
+          - intent: stop
+          - intent: affirm
+      - action: utter_goodbye
+
+  - story: learning path 2
+    steps:
+      - intent: greet
+      - action: action_init_conversation
+      - action: utter_greet
+      - intent: learn
+      - action: learn_form
+      - active_loop: learn_form
+      - slot_was_set:
+          - requested_slot: subject
+      - intent: stop
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_goodbye
+
+  - story: learning path 3
+    steps:
+      - intent: greet
+      - action: action_init_conversation
+      - action: utter_greet
+      - intent: learn
+      - action: learn_form
+      - active_loop: learn_form
+      - slot_was_set:
+          - requested_slot: subject
+      - slot_was_set:
+          - requested_slot: lesson
+      - slot_was_set:
+          - requested_slot: null
+      - slot_was_set:
+          - requested_slot: topic
+      - intent: stop
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_goodbye
+
+  - story: learning path 4
+    steps:
+      - intent: greet
+      - action: action_init_conversation
+      - action: utter_greet
+      - intent: learn
+      - action: learn_form
+      - active_loop: learn_form
+      - slot_was_set:
+          - requested_slot: subject
+      - slot_was_set:
+          - requested_slot: lesson
+      - slot_was_set:
+          - requested_slot: topic
+      - active_loop: null
+      - action: utter_submit_learn_form
+      - action: action_submit_learn_form
+      - intent: affirm
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+      - or:
+          - intent: goodbye
+          - intent: stop
+          - intent: affirm
+      - action: utter_goodbye
+
+  - story: learning path 5
+    steps:
+      - intent: greet
+      - action: action_init_conversation
+      - action: utter_greet
+      - intent: learn
+      - action: learn_form
+      - active_loop: learn_form
+      - slot_was_set:
+          - requested_slot: subject
+      - slot_was_set:
+          - requested_slot: lesson
+      - slot_was_set:
+          - requested_slot: topic
+      - active_loop: null
+      - action: utter_submit_learn_form
+      - action: action_submit_learn_form
+      - intent: affirm
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_want_to_learn_again
+      - or:
+          - intent: goodbye
+          - intent: stop
+      - action: utter_goodbye
+
+  - story: learning path 6
+    steps:
+      - intent: greet
+      - action: action_init_conversation
+      - action: utter_greet
+      - intent: learn
+      - action: learn_form
+      - active_loop: learn_form
+      - slot_was_set:
+          - requested_slot: subject
+      - slot_was_set:
+          - requested_slot: lesson
+      - slot_was_set:
+          - requested_slot: topic
+      - active_loop: null
+      - action: utter_submit_learn_form
+      - action: action_submit_learn_form
+      - intent: affirm
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_want_to_learn_again
+      - intent: affirm
+      - action: action_submit_learn_form
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+      - or:
+          - intent: goodbye
+          - intent: stop
+          - intent: affirm
+      - action: utter_goodbye
+
+  - story: learning path cancelled
+    steps:
+      - intent: learn
+      - action: learn_form
+      - active_loop: learn_form
+      - intent: stop
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_goodbye
+
+  - story: learning path cancelled 2
+    steps:
+      - intent: learn
+      - action: learn_form
+      - active_loop: learn_form
+      - slot_was_set:
+          - requested_slot: subject
+      - slot_was_set:
+          - requested_slot: null
+      - slot_was_set:
+          - requested_slot: lesson
+      - slot_was_set:
+          - requested_slot: null
+      - slot_was_set:
+          - requested_slot: topic
+      - intent: stop
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_goodbye
+
+  - story: learning path cancelled 3
+    steps:
+      - intent: learn
+      - action: learn_form
+      - active_loop: learn_form
+      - slot_was_set:
+          - requested_slot: subject-
+      - slot_was_set:
+          - requested_slot: null
+      - slot_was_set:
+          - requested_slot: lesson
+      - intent: stop
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_goodbye

@@ -1,0 +1,71 @@
+version: "3.0"
+stories:
+  - story: interactive_story_1
+    steps:
+      - intent: greet
+
+  - story: interactive_story_2
+    steps:
+      - intent: learn
+        entities:
+          - subject: english
+      - slot_was_set:
+          - subject: english
+      - action: learn_form
+      - active_loop: learn_form
+      - slot_was_set:
+          - subject: null
+      - slot_was_set:
+          - requested_slot: subject
+      - slot_was_set:
+          - subject: English
+      - slot_was_set:
+          - subject: English
+      - slot_was_set:
+          - requested_slot: lesson
+      - slot_was_set:
+          - lesson: "1"
+      - slot_was_set:
+          - lesson: "1"
+      - slot_was_set:
+          - requested_slot: topic
+      - slot_was_set:
+          - topic: Tortoise and Hare
+      - slot_was_set:
+          - topic: Tortoise and Hare
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: utter_submit_learn_form
+      - action: action_submit_learn_form
+
+  - story: interactive_story_3
+    steps:
+      - intent: learn
+      - action: learn_form
+      - active_loop: learn_form
+      - slot_was_set:
+          - requested_slot: subject
+      - slot_was_set:
+          - subject: English
+      - slot_was_set:
+          - subject: English
+      - slot_was_set:
+          - requested_slot: lesson
+      - slot_was_set:
+          - lesson: "1"
+      - slot_was_set:
+          - lesson: "1"
+      - slot_was_set:
+          - requested_slot: topic
+      - slot_was_set:
+          - topic: Tortoise and Hare
+      - slot_was_set:
+          - topic: Tortoise and Hare
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: utter_submit_learn_form
+      - action: action_submit_learn_form
+      - intent: stop
+      - action: utter_goodbye

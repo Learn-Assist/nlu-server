@@ -1,8 +1,0 @@
-version: "3.0"
-
-forms:
-  learn_form:
-    required_slots:
-      - subject
-      - lesson
-      - topic

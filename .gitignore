@@ -1,6 +1,7 @@
 env
 models/
-nlu-env
+venv
+
 .*
 !.gitignore
 !.dockerignore

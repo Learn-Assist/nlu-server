@@ -4,6 +4,7 @@ stories:
   - story: happy path
     steps:
       - intent: greet
+      - action: action_init_conversation
       - action: utter_greet
       - intent: mood_great
       - action: utter_happy
@@ -11,6 +12,7 @@ stories:
   - story: sad path 1
     steps:
       - intent: greet
+      - action: action_init_conversation
       - action: utter_greet
       - intent: mood_unhappy
       - action: utter_cheer_up
@@ -21,57 +23,10 @@ stories:
   - story: sad path 2
     steps:
       - intent: greet
+      - action: action_init_conversation
       - action: utter_greet
       - intent: mood_unhappy
       - action: utter_cheer_up
       - action: utter_did_that_help
       - intent: deny
       - action: utter_goodbye
-
-  # - story: learn
-  #   steps:
-  #     - intent: greet
-  #     - action: utter_greet
-  #     - intent: learn
-  #     - action: utter_subject
-  #     - intent: subject
-  #     - action: utter_subject
-  #     - intent: goodbye
-  #     - action: utter_goodbye
-
-  # - story: learn 2
-  #   steps:
-  #     - intent: greet
-  #     - action: utter_greet
-  #     - intent: learn
-  #     - action: utter_subject
-  #     - intent: subject
-  #     - action: utter_subject
-  #     - intent: topic
-  #     - action: utter_topic
-  #     - intent: goodbye
-  #     - action: utter_goodbye
-
-  # - story: learn 3
-  #   steps:
-  #     - intent: learn
-  #     - action: utter_subject
-  #     - intent: subject
-  #     - action: utter_subject
-  #     - intent: topic
-  #     - action: utter_topic
-  #     - intent: goodbye
-  #     - action: utter_goodbye
-
-  # - story: learn 3
-  #   steps:
-  #     - intent: learn
-  #     - action: utter_subject
-  #     - intent: subject
-  #     - action: utter_subject
-  #     - intent: topic
-  #     - action: utter_topic
-  #     - intent: affirm
-  #     - action: action_learn
-  #     - intent: goodbye
-  #     - action: utter_goodbye
