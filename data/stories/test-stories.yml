@@ -1,0 +1,59 @@
+version: "3.0"
+
+stories:
+  - story: happy test path
+    steps:
+      - intent: greet
+      - action: action_init_conversation
+      - action: utter_greet
+      - intent: test
+      - action: test_form
+      - active_loop: test_form
+      - slot_was_set:
+          - requested_slot: null
+      - intent: affirm
+      - action: action_test
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+      - or:
+          - intent: goodbye
+          - intent: stop
+          - intent: affirm
+      - action: utter_goodbye
+
+  - story: test path 2 cancelled
+    steps:
+      - intent: greet
+      - action: action_init_conversation
+      - action: utter_greet
+      - intent: test
+      - action: test_form
+      - active_loop: test_form
+      - slot_was_set:
+          - requested_slot: subject_test
+      - intent: stop
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_goodbye
+
+  - story: test path 3 cancelled
+    steps:
+      - intent: greet
+      - action: action_init_conversation
+      - action: utter_greet
+      - intent: test
+      - action: test_form
+      - active_loop: test_form
+      - slot_was_set:
+          - requested_slot: subject_test
+      - slot_was_set:
+          - requested_slot: lesson_test
+      - slot_was_set:
+          - requested_slot: null
+      - slot_was_set:
+          - requested_slot: topic_test
+      - intent: stop
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_goodbye

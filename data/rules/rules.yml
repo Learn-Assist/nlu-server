@@ -1,16 +1,6 @@
 version: "3.0"
 
 rules:
-  - rule: Say goodbye anytime the user says goodbye
-    steps:
-      - intent: goodbye
-      - action: utter_goodbye
-
-  - rule: Say 'I am a bot' anytime the user challenges
-    steps:
-      - intent: bot_challenge
-      - action: utter_iamabot
-
   - rule: Activate learning form
     steps:
       - intent: learn
@@ -28,7 +18,34 @@ rules:
       - action: utter_submit_learn_form
       - action: action_submit_learn_form
 
+  - rule: Activate test form
+    steps:
+      - intent: test
+      - action: test_form
+      - active_loop: test_form
+
+  - rule: Submit test form
+    condition:
+      - active_loop: test_form
+    steps:
+      - action: test_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: utter_submit_test_form
+      - action: action_submit_test_form
+
   - rule: Did not understand
     steps:
       - intent: nlu_fallback
       - action: utter_did_not_understand
+
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot

@@ -21,6 +21,8 @@ nlu:
       - Tortoise and the Hare
       - Tortoise and Hare
       - Photosynthesis
+      - One Little Kitten
+      - The Three Little Pigs
 
   - lookup: lesson
     examples: |

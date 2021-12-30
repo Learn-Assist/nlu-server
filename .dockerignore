@@ -3,5 +3,6 @@
 .rasa
 .git
 models/**.*
-env
+venv
 tests
+*.dot

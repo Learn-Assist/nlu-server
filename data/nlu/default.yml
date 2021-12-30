@@ -38,6 +38,20 @@ nlu:
       - of course
       - that sounds good
       - correct
+      - ok
+      - okay
+      - yes please
+      - fine
+      - okie
+      - done
+      - yep
+      - yup
+      - yessir
+      - hmm
+      - oh yeah
+      - yeah
+      - alright
+      - alrighty
 
   - intent: deny
     examples: |
@@ -48,6 +62,12 @@ nlu:
       - don't like that
       - no way
       - not really
+      - nah
+      - nope
+      - no way
+      - no thank you
+      - no thanks
+      - neh
 
   - intent: mood_great
     examples: |

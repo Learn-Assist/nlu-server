@@ -8,31 +8,31 @@ stories:
     steps:
       - intent: learn
         entities:
-          - subject: english
+          - subject_learn: english
       - slot_was_set:
-          - subject: english
+          - subject_learn: english
       - action: learn_form
       - active_loop: learn_form
       - slot_was_set:
-          - subject: null
+          - subject_learn: null
       - slot_was_set:
-          - requested_slot: subject
+          - requested_slot: subject_learn
       - slot_was_set:
-          - subject: English
+          - subject_learn: English
       - slot_was_set:
-          - subject: English
+          - subject_learn: English
       - slot_was_set:
-          - requested_slot: lesson
+          - requested_slot: lesson_learn
       - slot_was_set:
-          - lesson: "1"
+          - lesson_learn: "1"
       - slot_was_set:
-          - lesson: "1"
+          - lesson_learn: "1"
       - slot_was_set:
-          - requested_slot: topic
+          - requested_slot: topic_learn
       - slot_was_set:
-          - topic: Tortoise and Hare
+          - topic_learn: Tortoise and Hare
       - slot_was_set:
-          - topic: Tortoise and Hare
+          - topic_learn: Tortoise and Hare
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
@@ -45,23 +45,23 @@ stories:
       - action: learn_form
       - active_loop: learn_form
       - slot_was_set:
-          - requested_slot: subject
+          - requested_slot: subject_learn
       - slot_was_set:
-          - subject: English
+          - subject_learn: English
       - slot_was_set:
-          - subject: English
+          - subject_learn: English
       - slot_was_set:
-          - requested_slot: lesson
+          - requested_slot: lesson_learn
       - slot_was_set:
-          - lesson: "1"
+          - lesson_learn: "1"
       - slot_was_set:
-          - lesson: "1"
+          - lesson_learn: "1"
       - slot_was_set:
-          - requested_slot: topic
+          - requested_slot: topic_learn
       - slot_was_set:
-          - topic: Tortoise and Hare
+          - topic_learn: Tortoise and Hare
       - slot_was_set:
-          - topic: Tortoise and Hare
+          - topic_learn: Tortoise and Hare
       - slot_was_set:
           - requested_slot: null
       - active_loop: null

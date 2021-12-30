@@ -55,7 +55,7 @@ nlu:
       - I don't know what you said
       - Make yourself clear
       - Say slowly
-      - Teacv me slowly again
+      - Teach me slowly again
 
   - intent: stop
     examples: |
@@ -89,9 +89,9 @@ nlu:
       - [there was a moon](topic)
       - [london bridge is falling down](topic)
       - I need to learn the topic of [london bridge is falling down](topic)
-      - I need to learn [london bridge is falling down](topic) topic
+      - I need to learn [One Little Kitten](topic) topic
       - [mary had a little lamb](topic) topic
-      - [london bridge is falling down](topic) topic
+      - [One Little Kitten](topic) topic
       - [Tortoise and Hare](topic) topic
       - [Tortoise and the Hare](topic)
 
@@ -100,3 +100,32 @@ nlu:
       - [1](lesson)
       - [2](lesson)
       - lesson [1](lesson)
+
+  - intent: test
+    examples: |
+      - Take test
+      - Take assessment
+      - I need to take a test
+      - Assess me
+      - Conduct a test
+      - Conduct an assessment
+      - I want to test me
+      - test me
+      - I need to take an assessment
+      - I completed learning
+      - Done learning
+      - I am good with all topic. I want to take a test
+      - I need to take exam
+      - Examination
+      - I want to take an exam
+      - Exam
+      - Examination
+      - Tests
+      - Assessments
+      - I need to answer quiz
+      - Conduct a quiz
+      - Start quiz
+      - Start asking questions
+      - I want to answer questions
+      - I want to know how much I have learnt
+      - I want to test my knowlegde

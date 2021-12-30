@@ -31,7 +31,7 @@ stories:
       - action: learn_form
       - active_loop: learn_form
       - slot_was_set:
-          - requested_slot: subject
+          - requested_slot: subject_learn
       - intent: stop
       - action: action_deactivate_loop
       - active_loop: null
@@ -46,13 +46,13 @@ stories:
       - action: learn_form
       - active_loop: learn_form
       - slot_was_set:
-          - requested_slot: subject
+          - requested_slot: subject_learn
       - slot_was_set:
-          - requested_slot: lesson
+          - requested_slot: lesson_learn
       - slot_was_set:
           - requested_slot: null
       - slot_was_set:
-          - requested_slot: topic
+          - requested_slot: topic_learn
       - intent: stop
       - action: action_deactivate_loop
       - active_loop: null
@@ -67,11 +67,11 @@ stories:
       - action: learn_form
       - active_loop: learn_form
       - slot_was_set:
-          - requested_slot: subject
+          - requested_slot: subject_learn
       - slot_was_set:
-          - requested_slot: lesson
+          - requested_slot: lesson_learn
       - slot_was_set:
-          - requested_slot: topic
+          - requested_slot: topic_learn
       - active_loop: null
       - action: utter_submit_learn_form
       - action: action_submit_learn_form
@@ -94,11 +94,11 @@ stories:
       - action: learn_form
       - active_loop: learn_form
       - slot_was_set:
-          - requested_slot: subject
+          - requested_slot: subject_learn
       - slot_was_set:
-          - requested_slot: lesson
+          - requested_slot: lesson_learn
       - slot_was_set:
-          - requested_slot: topic
+          - requested_slot: topic_learn
       - active_loop: null
       - action: utter_submit_learn_form
       - action: action_submit_learn_form
@@ -120,11 +120,11 @@ stories:
       - action: learn_form
       - active_loop: learn_form
       - slot_was_set:
-          - requested_slot: subject
+          - requested_slot: subject_learn
       - slot_was_set:
-          - requested_slot: lesson
+          - requested_slot: lesson_learn
       - slot_was_set:
-          - requested_slot: topic
+          - requested_slot: topic_learn
       - active_loop: null
       - action: utter_submit_learn_form
       - action: action_submit_learn_form
@@ -161,15 +161,15 @@ stories:
       - action: learn_form
       - active_loop: learn_form
       - slot_was_set:
-          - requested_slot: subject
+          - requested_slot: subject_learn
       - slot_was_set:
           - requested_slot: null
       - slot_was_set:
-          - requested_slot: lesson
+          - requested_slot: lesson_learn
       - slot_was_set:
           - requested_slot: null
       - slot_was_set:
-          - requested_slot: topic
+          - requested_slot: topic_learn
       - intent: stop
       - action: action_deactivate_loop
       - active_loop: null
@@ -181,11 +181,11 @@ stories:
       - action: learn_form
       - active_loop: learn_form
       - slot_was_set:
-          - requested_slot: subject-
+          - requested_slot: subject_learn
       - slot_was_set:
           - requested_slot: null
       - slot_was_set:
-          - requested_slot: lesson
+          - requested_slot: lesson_learn
       - intent: stop
       - action: action_deactivate_loop
       - active_loop: null

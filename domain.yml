@@ -13,6 +13,7 @@ intents:
   - repeat
   - subject
   - topic
+  - test
 
 entities:
   - subject
@@ -21,8 +22,7 @@ entities:
 
 responses:
   utter_greet:
-    - text: "Hey! How are you?"
-    - text: "Hey! Nice to see you... How may I help?"
+    - text: "How may I help you today?"
 
   utter_cheer_up:
     - text: "Here is something to cheer you up:"
@@ -55,18 +55,30 @@ responses:
   utter_did_great:
     - text: "You did well... Great!"
 
-  utter_ask_subject:
+  utter_ask_subject_learn:
     - text: "What subject do you want to learn today?"
     - text: "Good! What subject do you feel like learning today?"
 
-  utter_ask_lesson:
+  utter_ask_lesson_learn:
     - text: "What lesson do you want to learn today?"
 
-  utter_ask_topic:
+  utter_ask_topic_learn:
     - text: "What topic do you want to learn about?"
 
   utter_submit_learn_form:
-    - text: "Great! I will teach {topic} from lesson number {lesson} in {subject}!"
+    - text: "Great! I will teach {topic_learn} from lesson number {lesson_learn} in {subject_learn}!"
+
+  utter_ask_subject_test:
+    - text: "In which subject do you want to take test today?"
+
+  utter_ask_lesson_test:
+    - text: "In which lesson do you want to take test today?"
+
+  utter_ask_topic_test:
+    - text: "In which topic do you want to take test about?"
+
+  utter_submit_test_form:
+    - text: "Great! I will ask you questions from {topic_test} from lesson number {lesson_test} in {subject_test}! Are you ready?"
 
   utter_did_not_understand:
     - text: "Sorry, I didn't understand that. Please tru again."
@@ -75,13 +87,19 @@ responses:
     - text: "Would you like to learn something else?"
 
 actions:
+  - action_init_conversation
   - action_learn
   - action_submit_learn_form
+  - action_submit_test_form
   - validate_learn_form
-  - action_init_conversation
-  - action_ask_subject
-  - action_ask_lesson
-  - action_ask_topic
+  - validate_test_form
+  - action_ask_subject_learn
+  - action_ask_lesson_learn
+  - action_ask_topic_learn
+  - action_ask_subject_test
+  - action_ask_lesson_test
+  - action_ask_topic_test
+  - action_test
 
 session_config:
   session_expiration_time: 60
@@ -90,19 +108,25 @@ session_config:
 forms:
   learn_form:
     required_slots:
-      - subject
-      - lesson
-      - topic
+      - subject_learn
+      - lesson_learn
+      - topic_learn
+
+  test_form:
+    required_slots:
+      - subject_test
+      - lesson_test
+      - topic_test
 
 slots:
-  subject:
+  subject_learn:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
         entity: subject
 
-  lesson:
+  lesson_learn:
     type: float
     influence_conversation: true
     min_value: 1
@@ -111,12 +135,49 @@ slots:
       - type: from_entity
         entity: lesson
 
-  topic:
+  topic_learn:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
         entity: topic
+
+  subject_test:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: subject
+
+  lesson_test:
+    type: float
+    influence_conversation: true
+    min_value: 1
+    max_value: 6
+    mappings:
+      - type: from_entity
+        entity: lesson
+
+  topic_test:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: topic
+
+  grade:
+    type: float
+    influence_conversation: true
+    min_value: 1
+    max_value: 12
+    mappings:
+      - type: custom
+
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: custom
 
   requested_slot:
     type: any
