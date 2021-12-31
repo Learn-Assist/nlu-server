@@ -8,6 +8,8 @@ USER 1001
 
 RUN rasa train
 
-ENTRYPOINT [ "rasa" ]
+CMD ["rasa", "run","--enable-api","--cors","*","--port", "8080"]
+
+
 
 
