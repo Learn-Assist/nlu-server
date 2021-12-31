@@ -6,6 +6,8 @@ COPY . .
 
 USER 1001
 
+RUN rasa train
+
 ENTRYPOINT [ "rasa" ]
 
 

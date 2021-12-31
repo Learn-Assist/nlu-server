@@ -1,7 +1,6 @@
 env
-models/
+models/**.*
 venv
-
 .*
 !.gitignore
 !.dockerignore
