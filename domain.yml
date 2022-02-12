@@ -21,9 +21,6 @@ entities:
   - topic
 
 responses:
-  utter_greet:
-    - text: "How may I help you today?"
-
   utter_cheer_up:
     - text: "Here is something to cheer you up:"
       image: "https://i.imgur.com/nGF1K8f.jpg"
@@ -88,6 +85,7 @@ responses:
 
 actions:
   - action_init_conversation
+  - action_greet
   - action_learn
   - action_submit_learn_form
   - action_submit_test_form

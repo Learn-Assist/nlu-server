@@ -5,7 +5,7 @@ stories:
     steps:
       - intent: greet
       - action: action_init_conversation
-      - action: utter_greet
+      - action: action_greet
       - intent: test
       - action: test_form
       - active_loop: test_form
@@ -26,7 +26,7 @@ stories:
     steps:
       - intent: greet
       - action: action_init_conversation
-      - action: utter_greet
+      - action: action_greet
       - intent: test
       - action: test_form
       - active_loop: test_form
@@ -41,7 +41,7 @@ stories:
     steps:
       - intent: greet
       - action: action_init_conversation
-      - action: utter_greet
+      - action: action_greet
       - intent: test
       - action: test_form
       - active_loop: test_form

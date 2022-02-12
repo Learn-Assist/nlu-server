@@ -5,7 +5,7 @@ digraph  {
 2 [class=active, fontsize=12, label=action_init_conversation];
 "-23" [class=ellipsis, label="..."];
 "-24" [class=ellipsis, label="..."];
-24 [class="dashed active", fontsize=12, label=utter_greet];
+24 [class="dashed active", fontsize=12, label=action_greet];
 25 [class=intent, fillcolor=lightblue, label="/learn", shape=rect, style=filled];
 26 [class="intent active", fillcolor=lightblue, label="/greet", shape=rect, style=filled];
 27 [class=intent, fillcolor=lightblue, label="/greet", shape=rect, style=filled];
